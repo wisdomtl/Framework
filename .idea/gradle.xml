@@ -10,8 +10,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/ad-api" />
-            <option value="$PROJECT_DIR$/ad-api-adsource" />
             <option value="$PROJECT_DIR$/ad-imp-popad" />
+            <option value="$PROJECT_DIR$/adsource-api" />
+            <option value="$PROJECT_DIR$/adsource-imp" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
