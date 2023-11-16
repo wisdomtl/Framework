@@ -16,3 +16,4 @@ rootProject.name = "Framework"
 include ':app'
 include ':ad-api'
 include ':ad-imp-popad'
+include ':ad-api-adsource'
