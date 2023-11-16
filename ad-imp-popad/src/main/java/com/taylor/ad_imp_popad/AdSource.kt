@@ -3,7 +3,7 @@ package com.taylor.ad_imp_popad
 import android.app.Activity
 import android.view.ViewGroup
 
-interface AdSource {
+internal interface AdSource {
     val adNetwork: AdNetwork
 
     fun load(activity: Activity, param: String)
@@ -13,7 +13,7 @@ interface AdSource {
     fun release()
 }
 
-enum class AdNetwork {
+internal enum class AdNetwork {
     KS,
     BAIDU,
     TENCENT,

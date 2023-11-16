@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import com.taylor.ad_imp_popad.AdNetwork
 import com.taylor.ad_imp_popad.AdSource
 
-class TecentBannerAd : AdSource {
+internal class TecentBannerAd : AdSource {
     override val adNetwork: AdNetwork
         get() = AdNetwork.TENCENT
 

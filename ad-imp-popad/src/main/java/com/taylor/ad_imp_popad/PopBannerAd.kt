@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import com.taylor.ad.StateListener
 import com.taylor.ad_api.BannerAd
 
-class PopBannerAd(private val popAd: PopAd, slotId: String) : BannerAd(slotId) {
+internal class PopBannerAd(private val popAd: PopAd, slotId: String) : BannerAd(slotId) {
     override fun show(block: (View, ViewGroup.LayoutParams) -> Unit) {
         popAd.show { ad -> (ad as BannerAd).show(block) }
     }

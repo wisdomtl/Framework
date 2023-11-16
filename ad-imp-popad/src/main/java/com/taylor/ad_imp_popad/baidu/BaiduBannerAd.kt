@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import com.taylor.ad_imp_popad.AdNetwork
 import com.taylor.ad_imp_popad.AdSource
 
-class BaiduBannerAd : AdSource {
+internal class BaiduBannerAd : AdSource {
     override val adNetwork: AdNetwork
         get() = AdNetwork.BAIDU
 

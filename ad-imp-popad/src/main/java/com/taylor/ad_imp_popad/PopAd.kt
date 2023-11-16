@@ -6,7 +6,7 @@ import com.taylor.ad.Ad
 import com.taylor.ad.StateListener
 import com.taylor.ad_imp_popad.AdConfigLoader
 
-class PopAd(slotId: String) : Ad(slotId) {
+internal class PopAd(slotId: String) : Ad(slotId) {
     override var stateListener: StateListener? = null
     private val loader by lazy { AdConfigLoader() }
 

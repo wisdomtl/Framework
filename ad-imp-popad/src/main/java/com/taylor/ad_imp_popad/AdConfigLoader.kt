@@ -1,6 +1,6 @@
 package com.taylor.ad_imp_popad
 
-class AdConfigLoader {
+internal class AdConfigLoader {
 
     fun load(slotId:String){
 
