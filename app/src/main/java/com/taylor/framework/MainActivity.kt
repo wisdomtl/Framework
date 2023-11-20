@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
     private val adFactory: AdFactory by inject()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        initAd()
+//        initAd()
         setContent {
             FrameworkTheme {
                 // A surface container using the 'background' color from the theme
