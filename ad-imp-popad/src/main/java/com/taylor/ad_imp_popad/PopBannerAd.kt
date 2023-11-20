@@ -3,7 +3,7 @@ package com.taylor.ad_imp_popad
 import android.app.Activity
 import android.view.View
 import android.view.ViewGroup
-import com.taylor.ad.StateListener
+import com.taylor.ad_api.StateListener
 import com.taylor.ad_api.BannerAd
 
 internal class PopBannerAd(private val popAd: PopAd, slotId: String) : BannerAd(slotId) {

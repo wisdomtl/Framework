@@ -2,8 +2,8 @@ package com.taylor.ad_imp_popad
 
 import android.app.Activity
 import android.util.Log
-import com.taylor.ad.Ad
-import com.taylor.ad.StateListener
+import com.taylor.ad_api.Ad
+import com.taylor.ad_api.StateListener
 
 internal class PopAd(slotId: String) : Ad(slotId) {
     override var stateListener: StateListener? = null

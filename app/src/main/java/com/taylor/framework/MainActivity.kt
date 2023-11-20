@@ -10,11 +10,14 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.taylor.ad_api.Ad
 import com.taylor.ad_api.AdFactory
-import com.taylor.ad_api.BannerAd
-import com.taylor.ad_imp_popad.initAd
+import com.taylor.ad_imp_popad.test.MultipleDefinition
 import com.taylor.framework.ui.theme.FrameworkTheme
+import org.koin.android.ext.android.get
 import org.koin.android.ext.android.inject
+import org.koin.core.parameter.parametersOf
+import org.koin.core.qualifier.named
 
 class MainActivity : ComponentActivity() {
     private val adFactory: AdFactory by inject()
@@ -30,7 +33,12 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-        val bannerAd = adFactory.get(BannerAd::class.java,"ddd")
+        val popAd = get<Ad>(named("popad")) { parametersOf(BANNER_SLOT_ID) }
+        popAd.load(this)
+        val m1 = get<MultipleDefinition>(named("m1"))
+        m1.lll()
+        val m2 = get<MultipleDefinition>(named("m2"))
+        m2.lll()
     }
 }
 

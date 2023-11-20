@@ -2,7 +2,7 @@ package com.taylor.framework
 
 import android.app.Application
 import com.taylor.ad_api.AdInit
-import com.taylor.ad_api.ParamFactory
+import com.taylor.ad_api.test.ParamFactory
 import com.taylor.ad_imp_popad.initAd
 import org.koin.android.ext.android.get
 import org.koin.android.ext.android.inject
