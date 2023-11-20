@@ -12,6 +12,7 @@ import org.koin.core.module.dsl.named
 import org.koin.dsl.module
 import com.taylor.ad_imp_popad.test.TopAd
 import org.koin.core.qualifier.named
+import org.koin.dsl.bind
 
 val adModules = module {
     /**
@@ -27,7 +28,9 @@ val adModules = module {
     /**
      * case: create two definitions about the same type with parameter constructor
      */
-    factory<Ad>(named("popad")) { (slotId: String) -> PopAd(slotId) }
+    factoryOf(::PopAd) {
+        named("popad")
+    } bind Ad::class //    factory<Ad>(named("popad")) { (slotId: String) -> PopAd(slotId) }
 
     /**
      * case: create two definitions about the same type
