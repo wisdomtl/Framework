@@ -35,6 +35,8 @@ class MainActivity : ComponentActivity() {
 
         val popAd = get<Ad>(named("popad")) { parametersOf(BANNER_SLOT_ID) }
         popAd.load(this)
+        val topAd = get<Ad>(named("topad")) { parametersOf(BANNER_SLOT_ID) }
+        topAd.load(this)
         val m1 = get<MultipleDefinition>(named("m1"))
         m1.lll()
         val m2 = get<MultipleDefinition>(named("m2"))
