@@ -1,10 +1,8 @@
 package com.taylor.ad_imp_popad
 
-import org.koin.core.context.startKoin
+import org.koin.core.context.loadKoinModules
 
 
-fun initAd() {
-    startKoin {
-        modules(adModules)
-    }
+fun initPopAd() {
+    loadKoinModules(adModules)// case: multiple startKoin will crash, loadKoinModules is an alternative
 }

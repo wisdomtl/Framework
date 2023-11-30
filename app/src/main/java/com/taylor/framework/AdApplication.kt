@@ -3,9 +3,11 @@ package com.taylor.framework
 import android.app.Application
 import com.taylor.ad_api.AdInit
 import com.taylor.ad_api.test.ParamFactory
-import com.taylor.ad_imp_popad.initAd
+import com.taylor.ad_imp_popad.initPopAd
+import com.taylor.ad_imp_topad.initTopAd
 import org.koin.android.ext.android.get
 import org.koin.android.ext.android.inject
+import org.koin.core.context.startKoin
 import org.koin.core.parameter.parametersOf
 
 class AdApplication : Application() {
@@ -18,7 +20,9 @@ class AdApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        initAd()
+        startKoin {  }// case: it is a must for koin initialization, and it could be called only once
+        initPopAd()
+        initTopAd()
         adInit.init(this, APP_ID)
         paramFactory.dodo()
     }

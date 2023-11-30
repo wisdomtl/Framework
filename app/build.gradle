@@ -66,5 +66,6 @@ dependencies {
 
     implementation project(":ad-api")
     implementation project(":ad-imp-popad")
+    implementation project(":ad-imp-topad")
     implementation "io.insert-koin:koin-android:3.2.1"
 }

@@ -10,7 +10,6 @@ import com.taylor.ad_imp_popad.test.MultipleDefinition2
 import org.koin.core.module.dsl.factoryOf
 import org.koin.core.module.dsl.named
 import org.koin.dsl.module
-import com.taylor.ad_imp_popad.test.TopAd
 import org.koin.core.qualifier.named
 import org.koin.dsl.bind
 
@@ -32,9 +31,6 @@ val adModules = module {
         named("popad")
     } bind Ad::class //    factory<Ad>(named("popad")) { (slotId: String) -> PopAd(slotId) } // case: param is must when invoke constructor
 
-    factoryOf(::TopAd) {
-        named("topad")
-    } bind Ad::class
 
     /**
      * case: create two definitions about the same type
