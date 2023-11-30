@@ -5,7 +5,7 @@ import android.util.Log
 import com.taylor.ad_api.Ad
 import com.taylor.ad_api.StateListener
 
-class TopAd(slotId:String): Ad(slotId) {
+internal class TopAd(slotId:String): Ad(slotId) {
     override var stateListener: StateListener? = null
 
     override fun load(activity: Activity) {
