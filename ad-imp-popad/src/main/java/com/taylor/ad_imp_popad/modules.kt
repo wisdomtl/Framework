@@ -31,7 +31,6 @@ val adModules = module {
         named("popad")
     } bind Ad::class //    factory<Ad>(named("popad")) { (slotId: String) -> PopAd(slotId) } // case: param is must when invoke constructor
 
-
     /**
      * case: create two definitions about the same type
      */

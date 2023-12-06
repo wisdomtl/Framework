@@ -1,0 +1,26 @@
+package com.taylor.adsource_imp
+
+import com.taylor.ad_imp_adsource.BannerAdSource
+import com.taylor.ad_imp_adsource.NetworkInit
+import com.taylor.ad_imp_adsource.SplashAdSource
+import org.koin.core.context.loadKoinModules
+import org.koin.core.module.dsl.factoryOf
+import org.koin.core.module.dsl.named
+import org.koin.dsl.bind
+import org.koin.dsl.module
+
+val baiduAdModules by lazy {
+    module {
+        factoryOf(::BaiduBannerAd) {
+            named("BAIDU")
+        } bind BannerAdSource::class
+
+        factoryOf(::BaiduSplashAd) {
+            named("BAIDU")
+        } bind SplashAdSource::class
+
+        factoryOf(::BaiduInit) {
+            named("BAIDU")
+        } bind NetworkInit::class
+    }
+}

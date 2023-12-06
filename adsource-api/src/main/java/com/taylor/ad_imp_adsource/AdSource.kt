@@ -5,11 +5,7 @@ import android.view.ViewGroup
 
 interface AdSource {
     val adNetwork: AdNetwork
-
     fun load(activity: Activity, param: String)
-
-    fun show(viewGroup: ViewGroup)
-
     fun release()
 }
 

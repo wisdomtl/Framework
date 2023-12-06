@@ -11,7 +11,10 @@ internal class PopAd(slotId: String) : Ad(slotId) {
 
     override fun load(activity: Activity) {
         Log.d("ttaylor", "PopAd.load: ")
-        loader.load(slotId)
+        val networks = loader.load(slotId)
+        networks.forEach {
+
+        }
     }
 
     override fun release() {

@@ -42,4 +42,5 @@ dependencies {
     implementation project(":ad-api")
     implementation "io.insert-koin:koin-android:3.2.1"
     implementation project(':adsource-api')
+    implementation project(":adsource-imp")
 }
